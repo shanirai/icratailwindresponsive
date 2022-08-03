@@ -1,0 +1,2 @@
+# icratailwindresponsive
+responsive fix
