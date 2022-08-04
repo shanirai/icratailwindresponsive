@@ -50,20 +50,36 @@ const CommunityPage = () => {
         <div className="w-[408px] h-[296px] relative z-0">
           <img src={require("./../assets/images/community/discord.png")} />
           <div className="absolute z-10 top-0 flex flex-1 w-full h-full items-center justify-center">
-            <img className="w-[170px]" src={require('./../assets/images/community/ch1.png')} />
+            <img
+              className="w-[170px]"
+              src={require("./../assets/images/community/ch1.png")}
+            />
           </div>
-
         </div>
-        <a target={'_blank'} href={"https://www.instagram.com/donbangseok/"} className="w-[408px] h-[296px] relative">
+        <a
+          target={"_blank"}
+          href={"https://www.instagram.com/donbangseok/"}
+          className="w-[408px] h-[296px] relative"
+        >
           <img src={require("./../assets/images/community/insta.png")} />
           <div className="absolute z-10 top-0 flex flex-1 w-full h-full items-center justify-center">
-          <img className="w-[170px]" src={require('./../assets/images/community/ch2.png')} />
+            <img
+              className="w-[170px]"
+              src={require("./../assets/images/community/ch2.png")}
+            />
           </div>
         </a>
-        <a target={'_blank'} href={"https://www.instagram.com/donbangseok/"} className="w-[408px] h-[296px] relative">
+        <a
+          target={"_blank"}
+          href={"https://www.instagram.com/donbangseok/"}
+          className="w-[408px] h-[296px] relative"
+        >
           <img src={require("./../assets/images/community/twitter.png")} />
           <div className="absolute z-10 top-0 flex flex-1 w-full h-full items-center justify-center">
-          <img className="w-[170px]" src={require('./../assets/images/community/ch3.png')} />
+            <img
+              className="w-[170px]"
+              src={require("./../assets/images/community/ch3.png")}
+            />
           </div>
         </a>
       </div>
@@ -78,14 +94,26 @@ const CommunityPage = () => {
           {t("community_news_t")}
         </div>
 
-        <Block pimage={'post1'} ptext={t('community_post_text1')} pdate={t('community_post_date1')} />
+        <Block
+          pimage={"post1"}
+          ptext={t("community_post_text1")}
+          pdate={t("community_post_date1")}
+        />
 
         <div className="border border-b-[0.1px] mx-[164px]" />
 
-        <Block pimage={'post2'} ptext={t('community_post_text2')} pdate={t('community_post_date2')} />
+        <Block
+          pimage={"post2"}
+          ptext={t("community_post_text2")}
+          pdate={t("community_post_date2")}
+        />
 
         <div className="border border-b-[0.1px] mx-[164px]" />
-        <Block pimage={'post3'} ptext={t('community_post_text3')} pdate={t('community_post_date3')} />
+        <Block
+          pimage={"post3"}
+          ptext={t("community_post_text3")}
+          pdate={t("community_post_date3")}
+        />
 
         <div className="border border-b-[0.1px] mx-[164px]  mb-[69px]" />
       </div>
@@ -97,8 +125,10 @@ const Block = (props) => {
   return (
     <div className="w-full px-[279px] my-[69px] flex flex-row">
       <div className="w-[408px] h-[296px] bg-[#EBEBEB]">
-        <img src={require(`./../assets/images/community/${props.pimage}.png`)} />
-        </div>
+        <img
+          src={require(`./../assets/images/community/${props.pimage}.png`)}
+        />
+      </div>
 
       <div className="flex flex-1 bg-red- pl-[73px] flex-col justify-center space-y-[59px]">
         <div className="text-[18px] text-[#303B4A]">

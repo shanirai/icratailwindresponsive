@@ -3,8 +3,9 @@ import { NavLink, Link } from "react-router-dom";
 import i18next from "i18next";
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
+import { CloseIcons, HemburgerIcons } from "./common/Icons";
 
-const Navbar = (props) => {
+const Header = (props) => {
   const { t } = useTranslation();
 
   const [changeColor, setChangeColor] = useState(
@@ -168,55 +169,45 @@ const Navbar = (props) => {
 
       {/* CUSTOM MOBILE NAVBAR STARTS */}
       <div
-        className={`w-full bg-white z-50 h-14 fixed top-0 block md:block lg:hidden outline-none ${
-          changeColor === true ? "shadow-md" : ""
-        }`}
+        className={`drop-shadow ${
+          changeColor === true ? "bg-white w-full" : "w-full"
+        } bg-red z-50 h-14 fixed top-0 block md:block lg:hidden outline-none`}
       >
-        <div className="w-full h-full flex flex-row items-center justify-between px-5 bg-white">
+        <div className="w-full h-full flex flex-row items-center justify-between px-5">
           <NavLink to="/" className="bg-red-">
-            <img
-              className="w-8/12"
-              src={require("./../assets/images/logos/dark-logo.png")}
-              alt="dark logo"
-            />
+            {changeColor === true || props.logo == "dark" ? (
+              <img
+                src={require("./../assets/images/logos/dark-logo.png")}
+                alt="dark logo"
+                className="h-5 w-50"
+              />
+            ) : (
+              <img
+                src={require("./../assets/images/logos/light-logo.png")}
+                alt="light logo"
+                className="h-5 w-50"
+              />
+            )}
           </NavLink>
+
           <div className="cursor-pointer">
             <div
-              className="flex text-sm bg-white rounded-full md:mr-0 border-2 border-[#7DCBC6] p-1"
+              className="flex text-sm   md:mr-0  p-1"
               onClick={() => {
                 setActive(!active);
               }}
             >
-              <svg
-                className="w-5 h-5"
-                fill="#7DCBC6"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
-              <svg
-                className="hidden w-6 h-6"
-                fill="currentColor"
-                viewBox="0 0 20 20"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  fillRule="evenodd"
-                  d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                  clipRule="evenodd"
-                ></path>
-              </svg>
+              {active ? (
+                <CloseIcons iconColor={changeColor ? "#000000" : "white"} />
+              ) : (
+                <HemburgerIcons iconColor={changeColor ? "#000000" : "white"} />
+              )}
             </div>
           </div>
         </div>
 
         <ul
-          className={`flex flex-col md:flex-row md:space-x-8 space-y-2 px-2.5 top-0 absolute -z-10 w-full  bg-white py-5 font-bold ${
+          className={`flex flex-col lg:flex-row md:space-x-8 space-y-2 px-6 top-0 absolute -z-10 w-full  bg-white py-6 font-bold ${
             active === true
               ? "translate-y-0 ease-in-out duration-500 mt-14"
               : "-translate-y-full"
@@ -229,8 +220,8 @@ const Navbar = (props) => {
             to={"/"}
             className={({ isActive }) =>
               isActive === true
-                ? "block py-2 pr-4 pl-3 text-white bg-[#37BBAF] rounded md:bg-transparent md:p-0 dark:text-white"
-                : "block py-2 pr-4 pl-3  text-[#434343] bg-white rounded md:bg-transparent md:p-0 dark:text-white bg-gray-200"
+                ? "block py-4 text-[#45A596]  border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white  "
+                : "block py-4  text-[#303B4A] bg-white border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white  "
             }
             aria-current="page"
           >
@@ -240,8 +231,8 @@ const Navbar = (props) => {
             to={"/about"}
             className={({ isActive }) =>
               isActive === true
-                ? "block py-2 pr-4 pl-3 text-white bg-[#37BBAF] rounded md:bg-transparent md:p-0 dark:text-white"
-                : "block py-2 pr-4 pl-3  text-[#434343] bg-white rounded md:bg-transparent md:p-0 dark:text-white bg-gray-200"
+                ? "block py-4 text-[#45A596]  border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white ml-0"
+                : "block py-4  text-[#303B4A] bg-white border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white ml-0"
             }
             aria-current="page"
           >
@@ -251,19 +242,19 @@ const Navbar = (props) => {
             to={"/donbangseok"}
             className={({ isActive }) =>
               isActive === true
-                ? "block py-2 pr-4 pl-3 text-white bg-[#37BBAF] rounded md:bg-transparent md:p-0 dark:text-white"
-                : "block py-2 pr-4 pl-3  text-[#434343] bg-white rounded md:bg-transparent md:p-0 dark:text-white bg-gray-200"
+                ? "block py-4 text-[#45A596]  border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white"
+                : "block py-4  text-[#303B4A] bg-white border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white"
             }
             aria-current="page"
           >
-            DONBANGSEOK
+            DonBangSeok
           </NavLink>
           <NavLink
             to={"/community"}
             className={({ isActive }) =>
               isActive === true
-                ? "block py-2 pr-4 pl-3 text-white bg-[#37BBAF] rounded md:bg-transparent md:p-0 dark:text-white"
-                : "block py-2 pr-4 pl-3  text-[#434343] bg-white rounded md:bg-transparent md:p-0 dark:text-white bg-gray-200"
+                ? "block py-4 text-[#45A596]  border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white"
+                : "block py-4  text-[#303B4A] bg-white border-b border-[#7070702E] md:bg-transparent md:p-0 dark:text-white"
             }
             aria-current="page"
           >
@@ -273,30 +264,12 @@ const Navbar = (props) => {
             to={"/team"}
             className={({ isActive }) =>
               isActive === true
-                ? "block py-2 pr-4 pl-3 text-white bg-[#37BBAF] rounded md:bg-transparent md:p-0 dark:text-white"
-                : "block py-2 pr-4 pl-3  text-[#434343] bg-white rounded md:bg-transparent md:p-0 dark:text-white bg-gray-200"
+                ? "block py-4 text-[#45A596]   md:bg-transparent md:p-0 dark:text-white"
+                : "block py-4  text-[#303B4A] bg-white  md:bg-transparent md:p-0 dark:text-white"
             }
             aria-current="page"
           >
             Team
-          </NavLink>
-          <NavLink
-            to={"/"}
-            className={({ isActive }) =>
-              isActive === true
-                ? "block py-2 pr-4 pl-3 text-white bg-[#37BBAF] rounded md:bg-transparent md:p-0 dark:text-white"
-                : "block py-2 pr-4 pl-3  text-[#37BBAF] bg-white rounded md:bg-transparent md:p-0 dark:text-white bg-gray-200"
-            }
-            aria-current="page"
-          >
-            <div className="flex flex-row space-x-[15px] items-center">
-              <img
-                className="h-[26px]"
-                src={require("./../assets/images/globe.png")}
-              />
-              <div className="text-[13px] text-[#434343]">ENG</div>
-              <div className="text-[13px] text-white">KOR</div>
-            </div>
           </NavLink>
         </ul>
       </div>
@@ -307,4 +280,4 @@ const Navbar = (props) => {
   );
 };
 
-export default Navbar;
+export default Header;
