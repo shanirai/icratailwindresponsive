@@ -6,8 +6,8 @@ import Fade from "react-reveal/Fade";
 // import Flip from "react-reveal/Flip";
 import i18next from "i18next";
 import cookies from "js-cookie";
-import Header from "../common/Header";
 // Custom components
+import Header from "../common/Header";
 
 function AboutMainSection() {
   //** language translation hooks */
@@ -25,6 +25,12 @@ function AboutMainSection() {
           src={require("./../../assets/images/about_page_banner.gif")}
           alt="banner"
         />
+        {/* <img
+          className="w-full  overflow-hidden  md:hidden"
+          // src={require("./../assets/images/banner.png")}
+          src={require("./../../assets/images/about-bg-mobile.png")}
+          alt="banner"
+        /> */}
       </div>
 
       <div className="absolute top-40 md:top-28 lg:top-0 px-[30px]  md:px-[35px] lg:px-[160px] flex flex-col h-full w-full bg-red- lg:justify-center  ">

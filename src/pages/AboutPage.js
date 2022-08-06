@@ -6,7 +6,9 @@ import cookies from "js-cookie";
 import AboutMainSection from "../components/about/AboutMainSection";
 import BlockchainTechnology from "../components/about/BlockchainTechnology";
 import Whyus from "../components/about/Whyus";
-import BenefitsAdvertiser from "../components/about/BenefitsAdvertiser";
+import BenefitsAdvertiser, {
+  MobileViewBenefitsAdvertiser,
+} from "../components/about/BenefitsAdvertiser";
 import BenefitsForUsers from "../components/about/BenefitsForUsers";
 import Roadmap from "../components/about/Roadmap";
 
