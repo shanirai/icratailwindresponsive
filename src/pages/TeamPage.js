@@ -75,7 +75,7 @@ const TeamPage = () => {
           {/* {t("team_members")} */}
         </div>
 
-        <div className="w-full px-[30px]  flex flex-col md:flex-row justify-between  md:px-0">
+        <div className="w-full px-[30px]  flex flex-col md:flex-row justify-between  md:px-0 lg:px-10">
           {/* Korean Team */}
           <div className="w-full md:w-6/12">
             {/* title */}
