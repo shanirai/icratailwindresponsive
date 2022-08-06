@@ -1,12 +1,13 @@
-import React, { useRef, useEffect } from "react";
+// React packages
+import React from "react";
 import { Link } from "react-router-dom";
+// Third packages
 import i18next from "i18next";
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-
 import Fade from "react-reveal/Fade";
-import Navbar from "../Navbar";
-import Header from "../Header";
+// Custom components
+import Header from "../common/Header";
 
 function MainSection(props) {
   //**translate hooks */
@@ -15,7 +16,7 @@ function MainSection(props) {
   const handleClick = () => {
     props.setActive(!props.active);
   };
-
+  //** language translate */
   const currentLanguageCode = cookies.get("i18next") || "en";
   return (
     <div className="w-full overflow-hidden">

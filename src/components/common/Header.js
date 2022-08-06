@@ -1,20 +1,26 @@
-import React, { useState, useEffect } from "react";
+// React packages
+import React, { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+// Third party packages
 import i18next from "i18next";
 import cookies from "js-cookie";
 import { useTranslation } from "react-i18next";
-import { CloseIcons, HemburgerIcons } from "./common/Icons";
+// Custom components
+import { CloseIcons, HemburgerIcons } from "./Icons";
 
 const Header = (props) => {
+  //** language translate hooks */
   const { t } = useTranslation();
-
+  //** navigation change color state */
   const [changeColor, setChangeColor] = useState(
     props.active == false ? true : false
   );
   const [active, setActive] = useState(false);
 
+  //** language translate */
   const currentLanguageCode = cookies.get("i18next") || "en";
 
+  //** navbar color change handler */
   const changeNavbarColor = () => {
     if (props.active !== false) {
       if (window.scrollY >= 50) {
@@ -32,34 +38,37 @@ const Header = (props) => {
       <div
         className={`drop-shadow-sm ${
           changeColor === true ? "bg-white" : ""
-        } z-50 fixed w-full top-0 hidden lg:block`}
+        } z-50 fixed w-full top-0 hidden md:block lg:block`}
       >
-        <div className="w-10/12 mx-auto bg- h-[84px] flex flex-row justify-between items-center">
+        <div className="lg:w-[80%] md:w-full md:px-9 lg:px-0  mx-auto bg- h-[84px] flex flex-row lg:justify-between  items-center  ">
           {/* L */}
-          <NavLink to="/" className="w-[207.2px] h-[33.13px]">
+          <NavLink
+            to="/"
+            className="lg:w-[207.2px] md:w-[160px]  lg:h-[33.13px] md:h-auto"
+          >
             {changeColor === true || props.logo == "dark" ? (
               <img
-                src={require("./../assets/images/logos/dark-logo.png")}
+                src={require("./../../assets/images/logos/dark-logo.png")}
                 alt="dark logo"
               />
             ) : (
               <img
-                src={require("./../assets/images/logos/light-logo.png")}
+                src={require("./../../assets/images/logos/light-logo.png")}
                 alt="dark logo"
               />
             )}
           </NavLink>
 
           {/* M */}
-          <div className="flex flex-row justify-end w-full text-[17px] cursor-pointer font-bold space-x-[66px]">
+          <div className="flex flex-row justify-end  w-full lg:text-[16px] md:text-[9px] leading-normal cursor-pointer font-bold items-center  lg:space-x-[66px] overflow-hidden">
             <NavLink
               to="/about"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#41BFB3] font-ebold"
+                  ? "text-[#41BFB3] font-ebold md:mr-6 lg:mr-0"
                   : changeColor === true
-                  ? "text-black"
-                  : "text-white"
+                  ? "text-black md:mr-6 lg:mr-0"
+                  : "text-white md:mr-6 lg:mr-0"
               }
             >
               About
@@ -69,10 +78,10 @@ const Header = (props) => {
               to="/"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#41BFB3] font-ebold"
+                  ? "text-[#41BFB3] font-ebold md:mr-6 lg:mr-0"
                   : changeColor === true
-                  ? "text-black"
-                  : "text-white"
+                  ? "text-black md:mr-6 lg:mr-0"
+                  : "text-white md:mr-6 lg:mr-0"
               }
             >
               DonBangSeok
@@ -83,10 +92,10 @@ const Header = (props) => {
               to="/community"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#41BFB3] font-ebold"
+                  ? "text-[#41BFB3] font-ebold md:mr-6 lg:mr-0"
                   : changeColor === true
-                  ? "text-black"
-                  : "text-white"
+                  ? "text-black md:mr-6 lg:mr-0"
+                  : "text-white md:mr-6 lg:mr-0"
               }
             >
               Community
@@ -96,43 +105,27 @@ const Header = (props) => {
               to="/team"
               className={({ isActive }) =>
                 isActive
-                  ? "text-[#41BFB3] font-ebold"
+                  ? "text-[#41BFB3] font-ebold md:mr-6 lg:mr-0"
                   : changeColor === true
-                  ? "text-black"
-                  : "text-white"
+                  ? "text-black md:mr-6 lg:mr-0"
+                  : "text-white md:mr-6 lg:mr-0"
               }
             >
               Team
               {/* {t("nav_team")} */}
             </NavLink>
-          </div>
-
-          {/* R */}
-          <div className="flex flex-row items-center">
-            {/* <div className="relative">
-              <input
-                className="border-b-2 outline-none bg-transparent"
-                type="search"
-              ></input>
-              <img
-                className="absolute right-0 top-0 w-[25.02px]"
-                src={require("./../assets/images/search.png")}
-                alt="search"
-              />
-            </div> */}
-
             <Link
               to="/comingsoon"
-              className="w-[166px] h-[43px] bg-[#37BBAF] rounded-[15px] text-[15px] text-white ml-[42px] cursor-pointer flex justify-center items-center"
+              className="lg:w-[166px] md:w-[70px] lg:h-[43px] md:h-[18px] bg-[#37BBAF] lg:rounded-[15px] md:rounded-lg lg:text-[16px] md:text-[7px] text-white lg:ml-[42px] cursor-pointer flex justify-center items-center"
             >
-              Download the app
+              Download app
               {/* {t("nav_download")} */}
             </Link>
 
-            <div className="flex flex-row space-x-[15px] ml-[34px] items-center">
+            <div className="flex flex-row space-x-[15px] md:ml-6 lg:ml-[34px] justify-start items-center">
               <img
                 className="h-[26px]"
-                src={require("./../assets/images/globe.png")}
+                src={require("./../../assets/images/globe.png")}
               />
               <div
                 className={`text-[13px] ${
@@ -171,19 +164,19 @@ const Header = (props) => {
       <div
         className={`drop-shadow ${
           changeColor === true ? "bg-white w-full" : "w-full"
-        } bg-red z-50 h-14 fixed top-0 block md:block lg:hidden outline-none`}
+        } bg-red z-50 h-14 fixed top-0 block md:hidden lg:hidden outline-none`}
       >
         <div className="w-full h-full flex flex-row items-center justify-between px-5">
           <NavLink to="/" className="bg-red-">
             {changeColor === true || props.logo == "dark" ? (
               <img
-                src={require("./../assets/images/logos/dark-logo.png")}
+                src={require("./../../assets/images/logos/dark-logo.png")}
                 alt="dark logo"
                 className="h-5 w-50"
               />
             ) : (
               <img
-                src={require("./../assets/images/logos/light-logo.png")}
+                src={require("./../../assets/images/logos/light-logo.png")}
                 alt="light logo"
                 className="h-5 w-50"
               />
