@@ -15,19 +15,19 @@ function Gamification() {
 
   return (
     <div className="w-full bg-white">
-      <div className="w-10/12 md:w-8/12 mx-auto flex flex-col md:flex-row mt-16 lg:mt-24 md:mt-[236px]">
+      <div className="w-10/12 md:w-[80%] mx-auto flex flex-col md:flex-row mt-16 lg:mt-24 ">
         {/* left */}
         <Fade left>
-          <div className="w-full md:w-1/3 ">
-            <div className="text-[#35BBAE] text-[16px] font-extrabold md:font-bold md:text-[20px] ">
+          <div className="w-full md:w-2/5 ">
+            <div className="text-[#35BBAE] text-[16px] font-extrabold md:font-bold md:text-[22px] ">
               {/* gamification */}
               {t("h_s5_title")}
             </div>
-            <div className="text-[#313131] text-2xl leading-8 md:text-[45px] font-ebold mt-8 md:mt-[49px] md:leading-[60px]">
+            <div className="text-[#313131] text-2xl  font-ebold md:text-xl md:font-extrabold  lg:text-[45px]  mt-8 md:mt-[49px] lg:leading-[60px]">
               {/* 다양한 게임을 통한 IDC 코인 쟁탈전! */}
               {t("h_s5_heading")}
             </div>
-            <div className="text-[#313131] text-[16px] md:text-[18px] mt-6 md:mt-[51px] md:leading-[30px]">
+            <div className="text-[#313131] text-[16px] md:text-sm mt-6 lg:mt-[51px] leading-normal">
               {t("h_s5_subheading")}
 
               {/* 베스트 리뷰, 행운의 룰렛, 가격을 맞춰라! 등 재미있는 돈방석

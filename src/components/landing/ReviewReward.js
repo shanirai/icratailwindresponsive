@@ -14,20 +14,20 @@ function ReviewReward() {
   const currentLanguageCode = cookies.get("i18next") || "en";
 
   return (
-    <div className="w-full bg-[#F6F6F6] mt-[-100px] lg:mt-0">
-      <div className="w-10/12 md:w-8/12 mx-auto flex flex-col md:flex-row">
+    <div className="w-full bg-[#F6F6F6] mt-[-100px] md:mt-[100px] lg:mt-0">
+      <div className="w-10/12 md:[90%] mx-auto flex flex-col md:flex-row">
         <img
-          className="animate-[bounce_1.5s_ease-in-out_infinite] w-full md:w-2/3 my-10 md:my-[95px] order-last sm:order-first"
+          className="animate-[bounce_1.5s_ease-in-out_infinite] w-full lg:w-2/3 md:w-[350px] my-10 md:my-[95px] order-last sm:order-first"
           src={require("./../../assets/images/home/two.png")}
         />
         {/* right */}
         <Fade right>
-          <div className="w-full md:w-1/3">
-            <div className="text-[#35BBAE] md:text-[20px] text-[16px] font-extrabold md:font-bold mt-20  md:mt-[217px]">
+          <div className="w-full ">
+            <div className="text-[#35BBAE] md:text-[20px] text-[16px] font-extrabold md:font-bold mt-20  lg:mt-[217px]">
               {/* Review Rewards */}
               {t("h_s4_title")}
             </div>
-            <div className="text-[#313131] text-2xl leading-8  md:text-[45px] font-ebold md:mt-[43px] mt-8 md:leading-[60px]">
+            <div className="text-[#313131] text-2xl   lg:text-[45px] font-ebold lg:mt-[43px] mt-8 lg:leading-[60px]">
               {/* SNS 리뷰 남기면 <br /> IDC 코인 리워드 지급 */}
               {t("h_s4_heading")}
             </div>

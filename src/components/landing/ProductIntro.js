@@ -19,8 +19,8 @@ function ProductIntro() {
   const currentLanguageCode = cookies.get("i18next") || "en";
 
   return (
-    <div class="container h-full justify-center items-center bg-[#F6F6F6]">
-      <div className="w-10/12 mx-auto py-[50px]  lg:py-[185px]">
+    <div class=" w-full  px-[30px] md:px-[36px] lg:px-[160px] h-full justify-center items-center bg-[#F6F6F6]">
+      <div className="w-full mx-auto py-[50px]  lg:py-[185px]">
         <div class="grid grid-cols-1 gap-4  sm:grid-cols-2 sm:gap-6 ">
           <div>
             <Fade left>
@@ -41,7 +41,7 @@ function ProductIntro() {
             </Fade>
           </div>
 
-          <div className="text-start  font-bold text-[16px] leading-[24px] md:text-[27px]  md:leading-[41px] text-[#313131] space-y-[32px] order-first sm:order-last ">
+          <div className="text-start  font-bold text-[16px] leading-[24px] text-sm  lg:text-[27px]  lg:leading-[41px] text-[#313131] space-y-[32px] order-first sm:order-last ">
             <Fade right>
               <div className="lg:border-l-[5px] border-l-[2px]   font-light lg:font-ebold border-[#37BBAF] pl-4 lg:pl-[30px]">
                 {t("h_s2_p1")}

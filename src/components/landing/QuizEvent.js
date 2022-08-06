@@ -19,25 +19,25 @@ function QuizEvent() {
   const currentLanguageCode = cookies.get("i18next") || "en";
 
   return (
-    <div className="w-full">
+    <div className="w-full ">
       {/* CONTAINER */}
-      <div className="flex flex-col md:flex-row w-10/12 md:w-8/12 mx-auto bg-red- my-24 md:mt-[217px]">
+      <div className="flex flex-col md:flex-row w-10/12 lg:w-8/12 md:w-[80%] mx-auto bg-red-  my-24 lg:mt-[217px]">
         {/* left */}
         <div className="w-full md:w-2/3">
           {/* text */}
           <Fade left>
-            <div className="text-[#35BBAE] md:text-[20px] text-[16px] font-extrabold md:font-bold mb-10 lg:mb-14 md:mb-[43px]">
+            <div className="text-[#35BBAE] md:text-[20px] text-[16px] font-extrabold md:font-bold mb-10 lg:mb-14 md:mb-[30px]">
               Quiz event
               {/* {t("h_s3_title")} */}
             </div>
-            <div className="text-[#313131] text-2xl lg:text-3xl md:text-[45px] font-ebold w-full md:w-[450px] leading-normal md:leading-[60px] mb-12 md:mb-[70px]">
+            <div className="text-[#313131] text-2xl lg:text-3xl md:text-[22px] font-ebold w-full md:w-[450px] leading-normal md:leading-[33px] mb-12 md:mb-7 lg:mb-[70px]">
               {/* 매주 열리는 <br /> 돈방석 퀴즈 타-임 <br /> 브랜드 토큰 쏜다! */}
               {t("h_s3_heading")}
             </div>
           </Fade>
 
           <Fade left delay={1500}>
-            <div className="text-[#313131] font-ebold text-[18px] mb-1 lg:mb-8 md:mb-[20px] font-bold">
+            <div className="text-[#313131] md:font-extrabold text-[18px] mb-1 lg:mb-5 md:mb-[9px] ">
               {/* 브랜드 토큰이란? */}
               {t("h_s3_question")}
             </div>
@@ -50,7 +50,7 @@ function QuizEvent() {
           </Fade>
 
           {/* MULTIPLE CARDS */}
-          <div className="flex flex-row mt-[45px] flex-wrap justify-start  lg:-ml-6 lg:space-x-5 space-x-3  bg-red-">
+          <div className="flex flex-row  mt-8 lg:mt-[45px]  flex-wrap justify-start  lg:-ml-6 lg:space-x-5 space-x-3  bg-red-">
             <Fade bottom delay={300}>
               <CollabCard amount={"100,000"} logo={"burger-king"} />
             </Fade>

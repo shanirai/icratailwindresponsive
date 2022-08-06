@@ -24,7 +24,7 @@ const TeamPage = () => {
         </Fade>
 
         {/* L2 */}
-        {/* <div className="xs:text-lg md:text-[30px] w-full text-center mx-auto md:w-[833px] text-center text-[#333333] my-[29px]">
+        {/* <div className="xs:text-lg md:text-[30px] w-full  mx-auto md:w-[833px] text-center text-[#333333] my-[29px]">
         The Icraft Blockchain team is specialized in development of Blockchain
         mainnet and Dapp
       </div> */}

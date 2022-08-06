@@ -18,7 +18,7 @@ function SocialContainer() {
   const currentLanguageCode = cookies.get("i18next") || "en";
 
   return (
-    <div className="md:pl-[164px] px-[30px] h-full py-10 md:py-0 md:h-[195px] bg-[#303B4A] z-10 flex flex-row  justify-between md:flex-row md:justify-start w-full items-center">
+    <div className="lg:pl-[164px] px-[30px] md:px-[36px] h-full py-10 md:py-0 md:h-[195px] bg-[#303B4A] z-10 flex flex-row  justify-between md:flex-row md:justify-start w-full items-center">
       <div className="flex flex-row bg-red- justify-around md:justify-start">
         <Fade left>
           <button
@@ -35,7 +35,7 @@ function SocialContainer() {
         </Fade>
       </div>
 
-      <div className="flex flex-row bg-red- w-full justify-end lg:justify-start ">
+      <div className="flex flex-row bg-red- w-full justify-end md:justify-center  lg:justify-start ">
         {/* 1 */}
         <Fade left delay={200}>
           <div className="lg:w-[70px] lg:h-[70px] w-[43px] h-[43px]  lg:my-6  rounded-full bg-[#414955] lg:ml-[37px] ml-[10px] flex flex-col justify-center">

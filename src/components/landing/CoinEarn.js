@@ -15,9 +15,9 @@ function CoinEarn() {
 
   return (
     <div className="w-full bg-[#F6F6F6]">
-      <div className="w-10/12 md:w-8/12 mx-auto flex flex-col md:flex-row">
+      <div className="w-10/12 md:w-[90%] lg:w-[66%] mx-auto flex flex-col md:flex-row">
         {/* left */}
-        <div className="w-full md:w-1/3 bg-red- flex flex-col lg:items-end items-start mt-16 lg:mt-36 md:mt-[300px]">
+        <div className="w-full md:w-2/4 bg-red- flex flex-col lg:items-end items-start mt-16 lg:mt-36 ">
           <Fade left>
             <div className="text-[#35BBAE] md:text-[20px] text-[16px] font-extrabold md:font-bold">
               {/* Coin Earn */}
@@ -26,7 +26,7 @@ function CoinEarn() {
 
             <div className="relative">
               {/* <div className="w-[150px] border-4 bg-[#35BBAE] border-[#35BBAE] absolute bottom-3 right-0 -z-10"></div> */}
-              <div className="text-[#313131] text-2xl leading-8 text-left md:text-[35px] font-ebold  mt-[45px] md:text-right md:leading-[60px]">
+              <div className="text-[#313131] md:text-2xl  text-left lg:text-[35px] font-ebold  mt-6 lg:mt-[45px]  lg:text-right lg:leading-[60px]">
                 {currentLanguageCode == "kr" ? (
                   <div>
                     볼수록 코인이 쌓이는 <br />{" "}
@@ -45,7 +45,7 @@ function CoinEarn() {
 
             <div className="relative">
               {/* <div className="w-[150px] border-4 bg-[#35BBAE] border-[#35BBAE] absolute bottom-3 right-0 -z-10"></div> */}
-              <div className="text-[#313131] text-2xl leading-8 text-left md:text-[35px] font-ebold mt-8 md:mt-[45px] md:text-right md:leading-[60px]">
+              <div className="text-[#313131] md:text-2xl  text-left lg:text-[35px] font-ebold  mt-6 lg:mt-[45px]  lg:text-right lg:leading-[60px]">
                 {currentLanguageCode == "kr" ? (
                   <div>
                     받을수록 코인이 쌓이는
@@ -67,12 +67,12 @@ function CoinEarn() {
 
         {/* right */}
         <div className="w-full md:w-2/3 flex flex-col md:flex-row ml-0 md:ml-[100px] space-x-0 lg:space-x-[40px]">
-          <div className="w-full md:w-1/2 mt-10 md:mt-[212px]">
+          <div className="w-full md:w-1/2 mt-16 lg:mt-[212px] md:mt-[150px] ">
             <div className="animate-[bounce_2s_ease-in-out_infinite] bg-white rounded-2xl py-[10px] pr-[-5px] shadow-2xl">
               <img src={require("./../../assets/images/home/view-1.png")} />
             </div>
           </div>
-          <div className="w-full md:w-1/2 mt-10 md:mt-[408px] mb-32 md:mb-[173px]">
+          <div className="w-full md:w-1/2 mt-10 lg:mt-[308px] md:mt-[250px] mb-32 ">
             <div className="animate-[bounce_1.5s_ease-in-out_infinite] bg-white rounded-2xl py-[30px] shadow-2xl">
               <img
                 className=""
