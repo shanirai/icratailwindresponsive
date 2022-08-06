@@ -1,54 +1,60 @@
+// React packages
 import React from "react";
-import Navbar from "../components/Navbar";
+// Third party packages
 import Fade from "react-reveal/Fade";
 import { useTranslation } from "react-i18next";
+// Custom components
+import Navbar from "../components/Navbar";
+import Header from "../components/common/Header";
 
 const TeamPage = () => {
   const { t } = useTranslation();
 
   return (
-    <div className="">
-      <Navbar active={false} />
-      {/* L1 */}
-      <Fade top>
-        <div className="text-3xl md:text-[55px] font-bold -mt-14 md:mt-48 text-center mb-[60px] text-[#333333]">
-          Developed by Global Blockchain Expert Team
-          {/* {t("team_title")} */}
-        </div>
-      </Fade>
+    <div>
+      {/* <Navbar active={false} /> */}
+      <Header active={false} />
+      <div className="w-full mt-12 md:mt-40 lg:mt-60">
+        {/* L1 */}
+        <Fade top>
+          <div className=" text-2xl text-left md:text-3xl lg:text-[55px] font-bold  px-[30px] md:px-[0px]  md:text-center mb-10  lg:mb-[60px] text-[#333333]">
+            Developed by Global Blockchain Expert Team
+            {/* {t("team_title")} */}
+          </div>
+        </Fade>
 
-      {/* L2 */}
-      {/* <div className="xs:text-lg md:text-[30px] w-full text-center mx-auto md:w-[833px] text-center text-[#333333] my-[29px]">
+        {/* L2 */}
+        {/* <div className="xs:text-lg md:text-[30px] w-full text-center mx-auto md:w-[833px] text-center text-[#333333] my-[29px]">
         The Icraft Blockchain team is specialized in development of Blockchain
         mainnet and Dapp
       </div> */}
-      <div className="mt-0 md:pt-[60px]"></div>
-      {/* Mr Yohan Seo */}
-      <div className="mx-auto w-11/12 md:w-[672px] bg-white rounded-[13px] drop-shadow-[0_2px_39px_rgba(0,0,0,0.08)] ">
-        <div className="flex flex-col justify-center items-center py-[31.5px]">
-          {/* image */}
-          <Fade top duration={300}>
-            <img
-              className="w-[125px] mb-6"
-              alt="Yohan Seo"
-              src={require("../assets/images/team/mryohan.png")}
-            />
-          </Fade>
-          {/* name */}
-          <Fade top duration={600}>
-            <div className="text-[#303B4A] text-2xl md:text-[25px] font-bold">
-              Yohan (Yeong-il) Seo
-            </div>
-          </Fade>
-          {/* designation */}
-          <Fade top duration={900}>
-            <div className="text-[#B1B1B1] w-1/2 text-sm md:text-[18px] text-center my-2 md:my-4">
-              Head of Blockchain Business Division, <br /> iCraft Co., Ltd.
-              {/* {t("team_d")} */}
-            </div>
-          </Fade>
-        </div>
-        {/* <Fade right duration={1200}> */}
+        {/* <div className="mt-0 md:pt-[60px]"></div> */}
+        {/* Mr Yohan Seo */}
+        <div className="mx-auto w-11/12 md:w-[672px] bg-white rounded-[13px] drop-shadow-[0_2px_39px_rgba(0,0,0,0.08)] ">
+          <div className="flex flex-col justify-center items-center py-[31.5px]">
+            {/* image */}
+            <Fade top duration={300}>
+              <img
+                className="w-[125px] mb-6"
+                alt="Yohan Seo"
+                src={require("../assets/images/team/mryohan.png")}
+              />
+            </Fade>
+            {/* name */}
+            <Fade top duration={600}>
+              <div className="text-[#303B4A] text-2xl md:text-[25px] font-bold">
+                Yohan (Yeong-il) Seo
+              </div>
+            </Fade>
+            {/* designation */}
+            <Fade top duration={900}>
+              <div className="text-[#B1B1B1] w-1/2 text-sm md:text-[18px] text-center my-2 md:my-4">
+                Head of Blockchain Business Division, <br /> iCraft Co., Ltd.
+                {/* {t("team_d")} */}
+              </div>
+            </Fade>
+          </div>
+          {/* <Fade right duration={1200}> */}
           <div className="pb-[31.5px]">
             <TextCard text="27 years of extensive experiences as 'Innovative Blockchain Specialist and Future Network Engineer' at KT and iCRAFT" />
             <TextCard text="Commercialization of Blockchain finance platform" />
@@ -60,53 +66,54 @@ const TeamPage = () => {
             <TextCard text="Advisory committee member of the Ministry of Science and ICT for Blockchain technology planning/evaluation" />
             <TextCard text="International standardization expert in IETF, ITU-T, ISO TC307" />
           </div>
-        {/* </Fade> */}
-      </div>
+          {/* </Fade> */}
+        </div>
 
-      {/* Team Section */}
-      <div className="text-center font-bold uppercase text-2xl md:text-3xl md:text-[40px] text-[#333333] mt-10 md:mt-[100px]  bg-green-">
-        Team Members
-        {/* {t("team_members")} */}
-      </div>
+        {/* Team Section */}
+        <div className=" text-left px-[30px] md:px-[0px] md:text-center font-bold  text-2xl md:text-3xl md:text-[40px] text-[#333333] mt-10 md:mt-[100px]  bg-green-">
+          Team Members
+          {/* {t("team_members")} */}
+        </div>
 
-      <div className="w-full flex flex-col md:flex-row justify-between px-0 md:px-10">
-        {/* Korean Team */}
-        <div className="w-full md:w-6/12">
-          {/* title */}
-          {/* <div className="text-center font-bold uppercase text-3xl md:text-[40px] text-[#333333]  bg-green-">
+        <div className="w-full px-[30px]  flex flex-col md:flex-row justify-between  md:px-0">
+          {/* Korean Team */}
+          <div className="w-full md:w-6/12">
+            {/* title */}
+            {/* <div className="text-center font-bold uppercase text-3xl md:text-[40px] text-[#333333]  bg-green-">
             Korean Team
           </div> */}
 
-          {/* grid */}
-          <div className="bg-red- flex flex-row flex-wrap my-5 md:my-[115px]">
-            <PersonCard delay={1} name="Evan Lee" image="evanlee" />
-            <PersonCard delay={2} name="Koeun Kang" image="koeun" />
-            <PersonCard delay={3} name="Sungchul Jung" image="jeong" />
-            <PersonCard delay={4} name="Uiyeong Hwang" image="lee" />
-            <PersonCard delay={5} name="Billy Park" image="billy" />
-            <PersonCard delay={6} name="HyunWoo Kim" image="hyunwoo" />
-            <PersonCard delay={7} name="DongHan Kim" image="donghan" />
-            <PersonCard delay={8} name="Halim Song" image="jack" />
-            <PersonCard delay={9} name="Seongwoo Lee" image="hwang" />
+            {/* grid */}
+            <div className="bg-red- flex flex-row flex-wrap my-5 md:my-[115px]">
+              <PersonCard delay={1} name="Evan Lee" image="evanlee" />
+              <PersonCard delay={2} name="Koeun Kang" image="koeun" />
+              <PersonCard delay={3} name="Sungchul Jung" image="jeong" />
+              <PersonCard delay={4} name="Uiyeong Hwang" image="lee" />
+              <PersonCard delay={5} name="Billy Park" image="billy" />
+              <PersonCard delay={6} name="HyunWoo Kim" image="hyunwoo" />
+              <PersonCard delay={7} name="DongHan Kim" image="donghan" />
+              <PersonCard delay={8} name="Halim Song" image="jack" />
+              <PersonCard delay={9} name="Seongwoo Lee" image="hwang" />
+            </div>
           </div>
-        </div>
 
-        {/* Global Team */}
-        <div className="w-full md:w-6/12">
-          {/* title */}
-          {/* <div className="text-center font-bold uppercase  text-3xl md:text-[40px] text-[#333333]  bg-blue-">
+          {/* Global Team */}
+          <div className="w-full md:w-6/12">
+            {/* title */}
+            {/* <div className="text-center font-bold uppercase  text-3xl md:text-[40px] text-[#333333]  bg-blue-">
             Global Team
           </div> */}
 
-          {/* grid */}
-          <div className="bg-red- flex flex-row flex-wrap my-5 md:my-[115px]">
-            <PersonCard delay={10} name="Priti Kumari" image="priti" />
-            <PersonCard delay={11} name="Mallikarjun Reddy" image="arjun" />
-            <PersonCard delay={12} name="Arush Pande" image="arush" />
-            <PersonCard delay={13} name="Navil Rodrigues" image="navil" />
-            <PersonCard delay={14} name="Shrikant Jha" image="shrikant" />
-            <PersonCard delay={15} name="Falguni Rawat" image="falguni" />
-            {/* <PersonCard delay={1} name="Vinoth Shanmugam" image="vinoth" /> */}
+            {/* grid */}
+            <div className="bg-red- flex flex-row flex-wrap my-5 md:my-[115px]">
+              <PersonCard delay={10} name="Priti Kumari" image="priti" />
+              <PersonCard delay={11} name="Mallikarjun Reddy" image="arjun" />
+              <PersonCard delay={12} name="Arush Pande" image="arush" />
+              <PersonCard delay={13} name="Navil Rodrigues" image="navil" />
+              <PersonCard delay={14} name="Shrikant Jha" image="shrikant" />
+              <PersonCard delay={15} name="Falguni Rawat" image="falguni" />
+              {/* <PersonCard delay={1} name="Vinoth Shanmugam" image="vinoth" /> */}
+            </div>
           </div>
         </div>
       </div>
